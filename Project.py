@@ -21,7 +21,7 @@ def Encode(key,message):
     return base64.urlsafe_b64encode("".join(enc).encode()).decode()
 
 def CheckInput(input):
-    if len(input.get()) >= 9:
+    if len(input.get()) > 9:
         input.set(input.get()[:-1])
 
 def Decode(key,message):
