@@ -11,8 +11,8 @@ class welcomePage(tk.Frame):
         welcome = tk.Label(self, text =('welcome'),font=("Bangna New",60),fg='white',bg='gray19').place(x=285, y = 110)
         to_en_de = tk.Label(self,font = ('Bangna New',20), text ='to Encrypting - Decrypting message',fg='white',bg='gray19').place(x=220, y = 210)
 
-        Button = tk.Button(self, text="Let's start!",bg='gray8',fg='black',width=15, command=lambda: controller.show_frame(firstPage))
-        Button.place(x=325, y=280)
+        Button = tk.Button(self,font = ('Bangna New',20), text="Let's start!",bg='gray8',fg='black',width=15, command=lambda: controller.show_frame(firstPage))
+        Button.place(x=295, y=280)
 
 class firstPage(tk.Frame):
     def __init__(self, parent, controller):
@@ -62,14 +62,14 @@ class encodePage(tk.Frame):
             mode.set("")
             Result.set("")
 
-        Label(self,font=('Bangena new',20),text='en - code Page',bg='gray19').place(x=350,y=60)
+        Label(self,font=('Bangena new',20),text='en - code Page',fg='white',bg='gray19').place(x=350,y=60)
 
-        Label(self,font=('Bangena new',20),text='RESULT',bg='gray19').place(x=370,y=320)
+        Label(self,font=('Bangena new',20),text='RESULT',fg='white',bg='gray19').place(x=370,y=320)
 
-        Label(self, font= ('Bangena new',25), text='MESSAGE : ',bg='gray19').place(x= 180,y=130)
+        Label(self, font= ('Bangena new',25), text='MESSAGE : ',fg='white',bg='gray19').place(x= 180,y=130)
         Entry(self, font = ('Bangena new',20), textvariable = Text,fg='Black', bg = 'CadetBlue1').place(x=330, y = 130,height = 40,width = 330)
 
-        Label(self, font = ('Bangena new',25), text ='KEY : ',bg='gray19').place(x=248, y = 190)
+        Label(self, font = ('Bangena new',25), text ='KEY : ',fg='white',bg='gray19').place(x=248, y = 190)
         Entry(self, font = ('Bangena new',20), textvariable = private_key ,fg='Black', bg ='CadetBlue1').place(x=330, y = 190,height=40,width = 330)
 
         Entry(self, font = ('Bangena new',20), textvariable = Result, bg ='CadetBlue1',fg='black').place(x=240, y = 375 , height = 40, width = 330)
@@ -78,10 +78,10 @@ class encodePage(tk.Frame):
 
         Button(self, font = ('Bangena new',20) ,text ='RESET' ,width =6, command = Reset,bg = 'LimeGreen', padx=2).place(x=450, y = 260)
 
-        Button(self, font = ('Bangena new',10),text= 'EXIT' , width = 6, command = Exit,bg = 'OrangeRed', padx=2, pady=2).place(x=620, y = 450)
+        Button(self, font = ('Bangena new',15),text= 'EXIT' , width = 6, command = Exit,bg = 'OrangeRed', padx=2, pady=2).place(x=640, y = 450)
 
-        Buttona = tk.Button(self, text="HOME", font=('Bangena new',10), padx=2, pady=2, command=lambda: controller.show_frame(firstPage))
-        Buttona.place(x=100, y=450)
+        Buttona = tk.Button(self, text="HOME", font=('Bangena new',15), padx=2, pady=2, command=lambda: controller.show_frame(firstPage))
+        Buttona.place(x=70, y=450)
 
 
 
@@ -117,26 +117,26 @@ class decodePage(tk.Frame):
             mode.set("")
             Result.set("")
     
-        Label(self,font=('Bangena new',20),text='de - code Page',bg='gray19').place(x=350,y=60)
+        Label(self,font=('Bangena new',20),text='de - code Page',fg='white',bg='gray19').place(x=350,y=60)
 
-        Label(self,font=('Bangena new',20),text='RESULT',bg='gray19').place(x=370,y=320)
+        Label(self,font=('Bangena new',20),text='RESULT',fg='white',bg='gray19').place(x=370,y=320)
 
-        Label(self, font= ('Bangena new',25), text='MESSAGE : ',bg='gray19').place(x= 180,y=130)
+        Label(self, font= ('Bangena new',25), text='MESSAGE : ',fg='white',bg='gray19').place(x= 180,y=130)
         Entry(self, font = ('Bangena new',20), textvariable = Text,fg='Black', bg = 'CadetBlue1').place(x=330, y = 130,height = 40,width = 330)
 
-        Label(self, font = ('Bangena new',25), text ='KEY : ',bg='gray19').place(x=248, y = 190)
+        Label(self, font = ('Bangena new',25), text ='KEY : ',fg='white',bg='gray19').place(x=248, y = 190)
         Entry(self, font = ('Bangena new',20), textvariable = private_key ,fg='Black', bg ='CadetBlue1').place(x=330, y = 190,height=40,width = 330)
 
         Entry(self, font = ('Bangena new',20), textvariable = Result, bg ='CadetBlue1',fg='black').place(x=240, y = 375 , height = 40, width = 330)
 
-        Button(self, font = ('Bangena new',20), text = 'DECODE'  ,padx =2,bg ='LightGray' ,command = Mode).place(x=260, y = 260)
+        Button(self, font = ('Bangena new',20), text = 'ENCODE'  ,padx =2,bg ='LightGray' ,command = Mode).place(x=260, y = 260)
 
         Button(self, font = ('Bangena new',20) ,text ='RESET' ,width =6, command = Reset,bg = 'LimeGreen', padx=2).place(x=450, y = 260)
 
-        Button(self, font = ('Bangena new',10),text= 'EXIT' , width = 6, command = Exit,bg = 'OrangeRed', padx=2, pady=2).place(x=620, y = 450)
+        Button(self, font = ('Bangena new',15),text= 'EXIT' , width = 6, command = Exit,bg = 'OrangeRed', padx=2, pady=2).place(x=640, y = 450)
 
-        Buttona = tk.Button(self, text="HOME", font=('Bangena new',10), padx=2, pady=2, command=lambda: controller.show_frame(firstPage))
-        Buttona.place(x=100, y=450)
+        Buttona = tk.Button(self, text="HOME", font=('Bangena new',15), padx=2, pady=2, command=lambda: controller.show_frame(firstPage))
+        Buttona.place(x=70, y=450)
 
 class Application(tk.Tk):
     def __init__(self, *args, **kwargs):
